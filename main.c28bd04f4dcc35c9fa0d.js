@@ -16,7 +16,7 @@
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction workaround(event) {\n  const image = document.querySelector(\"img\");\n  const rect = image.getBoundingClientRect();\n  const [width, height] = [rect.width, rect.height];\n\n  if (width > 0 && height === 0) location.reload();\n}\n\nwindow.addEventListener(\"load\", (event) => {\n  workaround(event);\n});\n\nconst blankImageWorkaround = {\n  workaround,\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (blankImageWorkaround);\n\n\n//# sourceURL=webpack:///./guides/scripts/blankImageWorkaround.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction workaround(event) {\n  const image = document.querySelector(\"img\");\n  const rect = image.getBoundingClientRect();\n  const [width, height] = [rect.width, rect.height];\n\n  if (width > 0 && height === 0) location.reload();\n}\n\nwindow.addEventListener(\"load\", (event) => {\n  setTimeout(() => {\n    workaround(event);\n  }, 0);\n});\n\nconst blankImageWorkaround = {\n  workaround,\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (blankImageWorkaround);\n\n\n//# sourceURL=webpack:///./guides/scripts/blankImageWorkaround.js?");
 
 /***/ }),
 
